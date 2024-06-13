@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛棋藝</title>
+    <style>
+        body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('tft.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+main {
+    height: 676px;
+    padding: 2em;
+}
+
+#contact {
+    background-color: #b3b3b3;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: #333  solid;
+}
+
+/* 表单 */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 标签和输入框容器 */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 标签 */
+.form-group label {
+    margin-right: 10px;
+    width: 70px; /* 根据需要调整标签宽度 */
+    font-weight: bold;
+}
+
+/* 输入框 */
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/* 单选按钮组 */
+.radio-group {
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+/* 按钮 */
+button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #9a9999;
+}
+
+.sign a {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.sign a:hover{
+    text-decoration:underline;
+}
+
+    </style>
+</head>
+<body>
+    <img src="tft2.png" alt="Description of the image">
+    <main>
+        <section id="contact">
+            <form id="contactForm">
+                <div class="radio-group">
+                    <label for="student">
+                        <input type="radio" id="student" name="role" value="student" required> 學生
+                    </label>
+                    <label for="teacher">
+                        <input type="radio" id="teacher" name="role" value="teacher" required> 教師
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="name">帳號：</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="password">密碼：</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">登入</button>
+                <br>
+                <div class="sign">
+                    <a href="register.html">沒有帳號?</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="script1.js"></script>
+</body>
+</html>

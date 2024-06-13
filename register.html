@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊新帳號</title>
+    <link rel="stylesheet" href="stylerg.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="home.html">
+                    <img id="logo" src="logo.png" alt="Logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="register">
+            <h2>註冊新帳號</h2>
+            <form id="registerForm" action="register.php" method="post">
+                <div class="form-group">
+                    <label for="role">角色：</label>
+                    <select id="role" name="role" required>
+                        <option value="student">學生</option>
+                        <option value="teacher">教師</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="username">帳號：</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">密碼：</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">電子郵件：</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">註冊</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
